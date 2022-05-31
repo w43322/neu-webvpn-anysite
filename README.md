@@ -10,7 +10,8 @@
 
 ## 在哪用？
 ### web端
-tang-keke.tk/webvpn
+[点我](tang-keke.tk/webvpn)
+![](./web.png)
 
 ### 客户端
 1. 安装pycrypto：`pip3 install pycrypto`
