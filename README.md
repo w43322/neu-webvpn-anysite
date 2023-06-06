@@ -5,7 +5,7 @@
 2. 学校提供的WebVPN服务所能选择的网页很少，cg平台和oj等常用网页都没有提供。
 ## how
 ### 原理
-1. 通过分析WebVPN的链接发现，都是以`https://webvpn.neu.edu.cn/http/77726476706e69737468656265737421`开头。
+1. 通过分析WebVPN的链接发现，都是以`https://webvpn.neu.edu.cn/http/62304135386136393339346365373340`开头。
 2. 这个链接后面的内容实际上是通过AES-128加密的域名，再加上url后半段。
 
 ## 在哪用？
@@ -23,13 +23,13 @@ from Crypto.Cipher import AES
 url = 'neucsecg.neu.edu.cn'
 
 cipher = AES.new(
-    'wrdvpnisthebest!',
+    'b0A58a69394ce73@',
     AES.MODE_CFB,
-    'wrdvpnisthebest!',
+    'b0A58a69394ce73@',
     segment_size=128)
 cipher_text = cipher.encrypt(url.ljust(len(url)//16*16+16, '\0').encode())
 
-res = 'https://webvpn.neu.edu.cn/http/77726476706e69737468656265737421' \
+res = 'https://webvpn.neu.edu.cn/http/62304135386136393339346365373340' \
     + cipher_text[:len(url)].hex()
 print(res)
 ```
