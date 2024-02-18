@@ -10,7 +10,7 @@
 
 ## 在哪用？
 ### web端
-[点我](http://tang-keke.tk/webvpn)
+[点我](http://hazuki.ren/webvpn)
 
 ![](./web.png)
 
